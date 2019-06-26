@@ -33,7 +33,7 @@ router.get('/:todoId', function(req, res){
 });
 
 router.put('/:todoId', function(req, res){
-	db.Todo.findOneAndUpdate({_id: req.params.todoId}, req.body {new: true})
+	db.Todo.findOneAndUpdate({_id: req.params.todoId}, req.body, {new: true})
 	.then(function(todos){
 		res.json(todos);
 	})
@@ -43,7 +43,7 @@ router.put('/:todoId', function(req, res){
 });
 
 router.delete('/:todoId', function(req, res){
-	db.Todo.remove({_id: req.params.todoId}, req.body {new: true})
+	db.Todo.remove({_id: req.params.todoId}, req.body, {new: true})
 	.then(function(todos){
 		res.json({message: 'Deleted'});
 	})
