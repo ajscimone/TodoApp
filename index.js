@@ -1,14 +1,19 @@
 var express = require('express'),
-	app = express()
+    app = express(),
+    bodyParser = require('body-parser');
+    
+var todoRoutes = require("./routes/todos");
 
-var todoRoutes = require('./routes/todos');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static(__dirname +'/public'));
+app.use(express.static(__dirname + '/views'));
 
-app.get('/', function(req, res)
-{
-	res.send("Hello from express");
+app.get('/', function(req, res){
+    res.sendFile("index.html");
 });
 
-app.get('/api/todos', todoRoutes);
+app.use('/api/todos', todoRoutes);
 
 app.listen(3000, function(){
 	console.log("App running on port 3000")
