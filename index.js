@@ -1,5 +1,6 @@
 var express = require('express'),
     app = express(),
+    port = 3000,
     bodyParser = require('body-parser');
     
 var todoRoutes = require("./routes/todos");
@@ -15,8 +16,8 @@ app.get('/', function(req, res){
 
 app.use('/api/todos', todoRoutes);
 
-app.listen(3000, function(){
-	console.log("App running on port 3000")
-});
-
-// Go to 	http://localhost:3000
+app.listen(port, function(){
+    console.log("APP IS RUNNING ON PORT " + port);
+})
+    
+// localhost:3000

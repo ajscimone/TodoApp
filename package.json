@@ -1,25 +1,16 @@
 {
-  "name": "todoapp",
+  "name": "todos_api",
   "version": "1.0.0",
-  "description": "A simple javascript Todo app with json api",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Anthony Scimone",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.6.1"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ajscimone/TodoApp.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ajscimone/TodoApp/issues"
-  },
-  "homepage": "https://github.com/ajscimone/TodoApp#readme"
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.9"
+  }
 }
